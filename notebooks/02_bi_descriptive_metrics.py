@@ -1,5 +1,5 @@
 from pathlib import Path
-import pandas as pd
+import pandas as pd 
 import matplotlib.pyplot as plt
 
 DATA_PATH = Path(".../Research Grant Project - Manufacturing Jobs - Manufacturing Information.csv")
