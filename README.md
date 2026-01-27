@@ -1,167 +1,151 @@
 # Manufacturing Workforce Decision Support System (Prototype)
 
-## Overview
+## What this project is
 
-This repository presents a prototype **workforce decision support system** designed to help institutional leaders evaluate how well current manufacturing labor demand aligns with the undergraduate talent pipeline. The project demonstrates how job posting data can be transformed into structured insights and decision-oriented models to support workforce development strategy, particularly in the context of higher education and public-sector investment.
+This repository contains a **decision-support prototype** built from manufacturing job postings I assembled together that were associated with CSU partner employers and the Handshake platform. The goal of the project is simple:
 
-The work was motivated by participation in a statewide workforce development grant proposal and is intended as a **proof of concept** rather than a production system.
+> **Help a university system understand where its current employer partnerships create real opportunities for undergraduates, and where targeted effort could improve alignment.**
 
----
-
-## Decision Context
-
-Universities and public institutions face a constrained resource allocation problem:
-
-> *Where should limited workforce development investments be directed to maximize alignment with regional labor market demand?*
-
-This project frames manufacturing hiring demand as a decision problem rather than a purely descriptive exercise. Instead of asking only *what jobs exist*, the analysis focuses on:
-
-* Which roles are realistically accessible to undergraduate students
-* Where demand is concentrated across employers and role families
-* Where mismatches exist between labor demand and educational pipelines
-* Which interventions are likely to produce the highest marginal impact
+This is not a production system or a predictive model. I built this project to simulate and learn from what it might look like to approach a real workforce planning problem using limited but realistic data.
 
 ---
 
-## Core Question
+## Why I made this project
 
-**Primary question:**
+During work on a statewide workforce development grant, I was asked to collect manufacturing job postings from companies already engaged with CSU. While the data showed what jobs existed, it didn’t clearly answer questions like:
 
-> Where should a university system invest workforce development resources to best align undergraduate manufacturing pipelines with employer demand?
+* Are these jobs actually accessible to undergraduates?
+* Is hiring demand concentrated among certain employers?
+* Where are the biggest gaps in the undergraduate pipeline?
+* What kinds of investments might realistically help?
 
-**Supporting questions:**
-
-* Which employers account for the majority of manufacturing hiring demand?
-* What role families dominate current postings?
-* What proportion of roles are accessible at the internship or entry level?
-* Where do the largest pipeline gaps exist?
+Because I’m interested in operations, strategy, and applied data science, I used this opportunity to turn a raw list of job postings into something that could support decision-making, not just describe the data.
 
 ---
 
-## Dataset Description
+## Main question
 
-The dataset consists of manufacturing-related job postings collected from employer career pages and student-facing hiring platforms (e.g., Handshake). Each posting was manually reviewed and structured into a tabular format.
+> **Given the manufacturing companies CSU already works with, where would investing effort help students the most?**
 
-### Key raw fields include:
+Supporting questions:
+
+* Which employers dominate hiring demand?
+* What types of roles are most common?
+* How many postings are realistically accessible to undergraduates?
+* Where do gaps exist between demand and CSU’s ability to place students?
+
+---
+
+## What data is used
+
+The dataset consists of manufacturing-related job postings collected from:
+
+* Employer career websites
+* Student-facing platforms (e.g., Handshake)
+
+I manually reviewed each posting and organized the information into a structured format suitable for data analysis.
+
+**Raw fields include:**
 
 * Employer name
 * Job title
 * Posting platform
-* Sector classification (manufacturing)
+* Optional salary information
 
-To ensure ethical and professional use, this repository includes only **sample or de-identified data**. The full raw dataset used during the grant work is not publicly shared.
-
----
-
-## Feature Engineering & Abstractions
-
-Rather than relying solely on raw job titles, the project introduces several **designed features** to support analysis:
-
-* **Role family** (e.g., engineering, manufacturing operations, quality, supply chain)
-* **Pipeline level** (internship, entry-level, experienced)
-* **Accessibility score** (heuristic measure of undergraduate suitability)
-* **Employer concentration indicators**
-
-These abstractions reflect deliberate modeling choices and are documented in the data dictionary.
+The dataset consists of manufacturing job postings assembled during workforce development work with Career Services. 
+All job postings were sourced from publicly accessible employer career pages and student-facing platforms and compiled into a structured format for analysis.
 
 ---
 
-## Analytical Layers
+## What the project adds to the data
 
-This project is intentionally structured into three analytical layers:
+Raw job postings alone are not enough to answer pipeline-related questions. This project adds structure by creating a few interpretable features:
 
-### 1. Business Intelligence (Descriptive)
+* **Role family** – broad grouping of job types (e.g., engineering, manufacturing operations)
+* **Pipeline level** – internship, entry-level, or experienced
+* **Accessibility score** – a simple numeric estimate of how suitable a role is for undergraduates
 
-* Job counts by employer
-* Job counts by role family
-* Distribution of postings by platform
-
-**Purpose:** Establish baseline visibility into manufacturing demand.
+These features are based on explicit rules and assumptions.
 
 ---
 
-### 2. Data Analysis (Diagnostic)
+## How the analysis is organized
 
-* Employer demand concentration
-* Role fragmentation across titles
-* Internship vs. full-time balance
-* Undergraduate accessibility patterns
+The project is split into four stages, with each stage answering a different kind of question.
 
-**Purpose:** Explain why demand appears as it does and identify structural patterns.
+### 1. Descriptive (Business Intelligence)
 
----
+**Question:** What does manufacturing demand look like?
 
-### 3. Data Science (Decision Support)
-
-The data science layer models **pipeline gaps** between labor demand and undergraduate supply.
-
-Key components:
-
-* Formal assumptions about undergraduate workforce capacity
-* Gap estimation by role family and employer concentration
-* Scenario analysis simulating alternative investment strategies
-
-Example scenarios include:
-
-* Increasing internship availability
-* Targeting top-demand employers
-* Prioritizing specific role families
-
-**Purpose:** Support resource allocation decisions under uncertainty.
+* Counts by employer
+* Counts by role type
+* Distribution by platform
 
 ---
 
-## Methods
+### 2. Diagnostic (Data Analysis)
 
-* Manual data curation and cleaning
-* Rule-based feature engineering
-* Heuristic scoring models
-* Scenario-based simulation (non-predictive)
+**Question:** Why does the data look this way?
 
-No machine learning models are used in this prototype; emphasis is placed on interpretability and decision relevance.
-
----
-
-## Limitations
-
-* Job postings represent a snapshot in time and may not reflect long-term demand
-* Skill requirements are inferred from job titles rather than full descriptions
-* Accessibility scores rely on modeling assumptions
-* Results are illustrative rather than definitive
-
-These limitations are explicitly acknowledged to avoid overinterpretation.
+* Employer concentration
+* Fragmentation of job titles
+* Share of postings accessible to undergraduates
 
 ---
 
-## Implications for Workforce Strategy
+### 3. Decision Support (Applied Data Science)
 
-While exploratory, this prototype demonstrates how even modest job posting data can be transformed into actionable insights when paired with careful problem framing and modeling. The approach is applicable to:
+**Question:** What would help the most?
 
-* Workforce development planning
-* University–industry partnership design
-* Grant-supported pipeline initiatives
+* Compare accessible demand to CSU placement capacity
+* Test simple “what if” scenarios
+* Identify high-impact focus areas
+
+Scenarios are illustrative and assumption-driven, not predictions.
 
 ---
 
-## Repository Structure
+## Methods (plain language)
+
+* Clean and standardize job posting data
+* Apply rule-based interpretations to job titles
+* Convert qualitative judgments into simple numeric signals
+* Compare outcomes across scenarios
+
+The emphasis is on **clarity and interpretability.**
+
+---
+
+## What this project does *not* claim
+
+* It does not model the entire manufacturing labor market
+* It does not predict future job growth
+* It does not estimate causal effects
+
+Results should be interpreted as reasoning tools, not final answers.
+
+---
+
+## Why this matters
+
+Even with limited data, institutions often need to make decisions about:
+
+* where to invest partnership effort
+* which employers to prioritize
+* how to align student pipelines with real opportunities
+
+I made this project to demonstrate how even a small, realistic dataset can be used to support funding and workforce strategy discussions in a structured and transparent way.
+
+---
+
+## Repository structure
 
 ```
 manufacturing-workforce-decision-support/
-├── data/
-│   ├── sample_job_postings.csv
-│   ├── data_dictionary.md
-├── notebooks/
-│   ├── 01_data_import_and_cleaning.ipynb
-│   ├── 02_bi_descriptive_metrics.ipynb
-│   ├── 03_role_and_pipeline_modeling.ipynb
-│   ├── 04_scenario_analysis.ipynb
-├── src/
-│   ├── clean_data.py
-│   ├── feature_engineering.py
-│   ├── pipeline_model.py
-├── outputs/
-│   ├── figures/
-│   ├── summary_tables/
+├── data/                 # Raw, processed, and sample datasets
+├── notebooks/            # Step-by-step analysis and modeling
+├── src/                  # Optional reusable logic (scaffolded)
+├── outputs/              # Generated figures and tables (may be empty)
 └── README.md
 ```
 
@@ -169,12 +153,14 @@ manufacturing-workforce-decision-support/
 
 ## Author
 
-McAelan Remigio
-
+**McAelan Remigio**
 Statistics & Data Science, San Diego State University
 
 ---
 
 ## License
 
-This project is shared for educational and portfolio purposes only.
+The MIT License applies to the code and analysis in this repository. 
+Job posting content remains the property of the original employers.
+
+Shared for educational and portfolio purposes only.
