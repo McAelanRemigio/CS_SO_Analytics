@@ -1,6 +1,6 @@
 # Data Dictionary
 
-This document describes the schema for the manufacturing job posting dataset used in the *Manufacturing Workforce Decision Support System (Prototype)* project.
+This document describes the schema for the manufacturing job posting dataset used in the *Workforce Analytics* project.
 
 The original dataset is stored in an Excel workbook and treated as **immutable source data**. All cleaning, standardization, and feature engineering steps are performed programmatically downstream. This data dictionary reflects the **raw schema** prior to any derived features.
 
