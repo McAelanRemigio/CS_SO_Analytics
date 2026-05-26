@@ -1,166 +1,151 @@
-# Manufacturing Workforce Decision Support System (Prototype)
+# SDSU Career Services Strategy & Operations Analytics
 
-## What this project is
+This repository documents analytics and reporting work completed for San Diego State University Career Services, supporting workforce development, program lifecycle management, KPI standardization, and leadership decision-making.
 
-This repository contains a **decision-support prototype** built from manufacturing job postings I assembled together that were associated with CSU partner employers and the Handshake platform. The goal of the project is simple:
+Because the underlying data includes institutional and student-related records, raw data, internal files, and production code are not public. This repository focuses on project context, workflow design, KPI logic, documentation structure, and sanitized examples of the analytical approach.
 
-> **Help a university system understand where its current employer partnerships create real opportunities for undergraduates, and where targeted effort could improve alignment.**
+## Overview
 
-This is not a production system or a predictive model. I built this project to simulate and learn from what it might look like to approach a real workforce planning problem using limited but realistic data.
+Career Services data was distributed across multiple systems, service lines, exports, and reporting conventions. Leadership needed clearer ways to evaluate program activity, employer engagement, student support, labor market demand, and operational outcomes.
 
----
+This work focused on transforming fragmented operational data into a more reliable reporting structure for planning, grant support, leadership review, and recurring decision-making.
 
-## Why I made this project
+## Key Outcomes
 
-During work on a statewide workforce development grant, I was asked to collect manufacturing job postings from companies already engaged with CSU. While the data showed what jobs existed, it didn’t clearly answer questions like:
+- Supported workforce analytics for a successful **$2M CSU initiative**, analyzing regional labor gaps, workforce demand, and program alignment across multiple campuses.
+- Rebuilt **2 years of fragmented program lifecycle management data** across **761K+ records** and **100+ files** into a standardized reporting pipeline.
+- Reduced manual reconciliation by standardizing reporting logic, KPI definitions, and documentation across fragmented operational exports.
+- Created leadership-ready outputs for cross-campus planning, employer engagement, internal operations, and program evaluation.
+- Analyzed large-scale survey and engagement data, including a **26K+ response dataset**, to support student-centered service planning and institutional reporting.
 
-* Are these jobs actually accessible to undergraduates?
-* Is hiring demand concentrated among certain employers?
-* Where are the biggest gaps in the undergraduate pipeline?
-* What kinds of investments might realistically help?
+## Project Context
 
-Because I’m interested in operations, strategy, and applied data science, I used this opportunity to turn a raw list of job postings into something that could support decision-making, not just describe the data.
+Career Services supports a wide range of student, employer, and institutional functions, including appointments, workshops, employer engagement, job postings, platform usage, and workforce development initiatives.
 
----
+The main challenge was not only technical data cleaning. The larger problem was creating a consistent structure for answering operational and strategic questions:
 
-## Main question
+- Which services are students using?
+- Where is employer engagement concentrated?
+- What programs and events are driving participation?
+- How do workforce needs align with institutional programming?
+- What KPIs should leadership use for recurring review?
+- How can fragmented data be standardized into repeatable reporting workflows?
 
-> **Given the manufacturing companies CSU already works with, where would investing effort help students the most?**
+## Workstreams
 
-Supporting questions:
+### 1. Workforce & Labor Market Analytics
 
-* Which employers dominate hiring demand?
-* What types of roles are most common?
-* How many postings are realistically accessible to undergraduates?
-* Where do gaps exist between demand and CSU’s ability to place students?
+Analyzed regional workforce demand, labor gaps, program outcomes, and institutional alignment to support a statewide manufacturing workforce development proposal.
 
----
+Focus areas included:
 
-## What data is used
+- Regional labor market demand
+- Workforce gap analysis
+- Cross-campus planning support
+- Grant-related data analysis
+- Program alignment and strategic framing
 
-The dataset consists of manufacturing-related job postings collected from:
+### 2. Program Lifecycle Reporting
 
-* Employer career websites
-* Student-facing platforms (e.g., Handshake)
+Rebuilt fragmented program lifecycle management data into a centralized reporting structure for tracking program activity, attendance, engagement, and outcomes.
 
-I manually reviewed each posting and organized the information into a structured format suitable for data analysis.
+This involved:
 
-**Raw fields include:**
+- Consolidating 100+ files across multiple reporting periods
+- Cleaning and restructuring 761K+ operational records
+- Standardizing field names, categories, and reporting periods
+- Creating repeatable transformation logic
+- Preparing data for leadership review and internal tracking
 
-* Employer name
-* Job title
-* Posting platform
-* Optional salary information
+### 3. KPI Standardization
 
-The dataset consists of manufacturing job postings assembled during workforce development work with Career Services. 
-All job postings were sourced from publicly accessible employer career pages and student-facing platforms and compiled into a structured format for analysis.
+Developed consistent KPI definitions across multiple Career Services functions.
 
----
+KPI categories included:
 
-## What the project adds to the data
+- Student support
+- Appointments
+- Programs and events
+- Employer engagement
+- Platform usage
+- Job postings and opportunities
+- Student outcomes
+- Survey and engagement indicators
 
-Raw job postings alone are not enough to answer pipeline-related questions. This project adds structure by creating a few interpretable features:
+### 4. Survey & Student Engagement Analysis
 
-* **Role family** – broad grouping of job types (e.g., engineering, manufacturing operations)
-* **Pipeline level** – internship, entry-level, or experienced
-* **Accessibility score** – a simple numeric estimate of how suitable a role is for undergraduates
+Analyzed large-scale survey data to support student-centered planning and reporting.
 
-These features are based on explicit rules and assumptions.
+The survey work focused on:
 
----
+- Cleaning and preparing high-volume survey records
+- Summarizing response patterns
+- Identifying engagement trends
+- Supporting institutional understanding of student needs
+- Translating survey results into usable reporting outputs
 
-## How the analysis is organized
+### 5. Leadership Reporting
 
-The project is split into four stages, with each stage answering a different kind of question.
+Translated operational data into decision-ready summaries for leadership review.
 
-### 1. Descriptive (Business Intelligence)
+Outputs supported:
 
-**Question:** What does manufacturing demand look like?
+- Internal planning
+- Program evaluation
+- Employer engagement strategy
+- Workforce development conversations
+- Resource allocation discussions
+- Recurring KPI reporting
 
-* Counts by employer
-* Counts by role type
-* Distribution by platform
+## Example KPI Groups
 
----
-
-### 2. Diagnostic (Data Analysis)
-
-**Question:** Why does the data look this way?
-
-* Employer concentration
-* Fragmentation of job titles
-* Share of postings accessible to undergraduates
-
----
-
-### 3. Decision Support (Applied Data Science)
-
-**Question:** What would help the most?
-
-* Compare accessible demand to CSU placement capacity
-* Test simple “what if” scenarios
-* Identify high-impact focus areas
-
-Scenarios are illustrative and assumption-driven, not predictions.
-
----
-
-## Methods (plain language)
-
-* Clean and standardize job posting data
-* Apply rule-based interpretations to job titles
-* Convert qualitative judgments into simple numeric signals
-* Compare outcomes across scenarios
-
-The emphasis is on **clarity and interpretability.**
-
----
-
-## What this project does *not* claim
-
-* It does not model the entire manufacturing labor market
-* It does not predict future job growth
-* It does not estimate causal effects
-
-Results should be interpreted as reasoning tools, not final answers.
-
----
-
-## Why this matters
-
-Even with limited data, institutions often need to make decisions about:
-
-* where to invest partnership effort
-* which employers to prioritize
-* how to align student pipelines with real opportunities
-
-I made this project to demonstrate how even a small, realistic dataset can be used to support funding and workforce strategy discussions in a structured and transparent way.
-
----
-
-## Repository structure
-
-```
-manufacturing-workforce-decision-support/
-├── data/                 # Raw, processed, and sample datasets
-├── notebooks/            # Step-by-step analysis and modeling
-├── src/                  # Optional reusable logic (scaffolded)
-├── outputs/              # Generated figures and tables (may be empty)
-└── README.md
-```
-
----
-
-## Author
-
-**McAelan Remigio**
-Statistics & Data Science, San Diego State University
-
----
-
-## License
-
-The MIT License applies to the code and analysis in this repository. 
-Job posting content remains the property of the original employers.
-
-Shared for educational and portfolio purposes only.
+### Student Support
+
+- Completed appointments
+- Students served
+- Appointment types
+- Service modality trends
+- Student engagement patterns
+
+### Programs & Events
+
+- Orientations and presentations
+- Workshop attendance
+- Event participation
+- Employer engagement at events
+- Program lifecycle activity
+
+### Employer Development
+
+- Approved employers
+- New employer contacts
+- Employer orientations
+- Event participation
+- Recruiting engagement
+
+### Platforms & Opportunities
+
+- Platform logins
+- Profile completion
+- Job postings
+- Openings
+- Opportunity types
+
+### Survey & Engagement
+
+- Response volume
+- Participation trends
+- Student needs indicators
+- Engagement themes
+- Reporting-ready survey summaries
+
+## Tools & Methods
+
+- Excel
+- Data cleaning
+- KPI design
+- Data dictionary design
+- Reporting workflow development
+- Survey analysis
+- Operational analytics
+- Leadership reporting
