@@ -1,0 +1,119 @@
+Sample Survey Intelligence Portfolio Report body {     font-family: Arial, sans-serif;     margin: 40px;     line-height: 1.6;     color: #222;     max-width: 1100px; } h1, h2 {     color: #123b5d; } .disclaimer {     background-color: #f3f5f7;     border-left: 5px solid #123b5d;     padding: 15px;     margin-bottom: 30px; } .styled-table {     border-collapse: collapse;     margin: 20px 0;     width: 100%;     font-size: 0.95em; } .styled-table th, .styled-table td {     border: 1px solid #ddd;     padding: 10px; } .styled-table th {     background-color: #123b5d;     color: white;     text-align: left; } .section {     margin-bottom: 40px; } .footer {     margin-top: 60px;     font-size: 0.9em;     color: #555; } code {     background-color: #f4f4f4;     padding: 2px 4px;     border-radius: 4px; }
+Employer Engagement Survey Intelligence Report
+==============================================
+**Portfolio Demonstration Version**
+**Confidentiality Notice:**
+This document is a fully anonymized and synthetic portfolio demonstration derived from a real survey analytics workflow. All organization names, counts, categories, and operational details have been modified or generalized for confidentiality purposes. The report is intended to showcase analytical methodology, reporting structure, and strategic insight generation without exposing internal or proprietary information.
+Project Overview
+----------------
+This report demonstrates a reusable survey analytics framework developed in R to transform structured and open-ended stakeholder feedback into operational insights and executive-style reporting outputs.
+The workflow included:
+*   Survey data cleaning and normalization
+*   Categorical response aggregation
+*   Text-based thematic analysis using rule-based keyword detection
+*   Stakeholder segmentation and filtering
+*   Automated reporting tables and visual summaries
+*   Strategic insight synthesis for decision support
+Representative Reporting Sections
+---------------------------------
+Survey Distribution Channels
+----------------------------
+Category
+Representative Count
+Regional Public University Network
+412
+Coastal Workforce Alliance
+351
+Metro Technical Consortium
+289
+Northern Innovation Collaborative
+201
+Community Career Partnership
+177
+Employer Industry Representation
+--------------------------------
+Category
+Representative Count
+Education & Workforce Development
+388
+Public Administration
+201
+Healthcare & Human Services
+173
+Technology & Engineering
+141
+Professional Services
+118
+Organization Size
+-----------------
+Category
+Representative Count
+10–49 Employees
+305
+50–249 Employees
+276
+250–999 Employees
+194
+1000+ Employees
+162
+Planned Hiring Types
+--------------------
+Category
+Representative Count
+Full-Time Roles
+811
+Internships
+592
+Part-Time Roles
+476
+Project-Based Roles
+188
+Career Center Priorities
+------------------------
+Category
+Representative Count
+Employment Outcomes
+702
+Employer Satisfaction
+588
+Student Skill Development
+421
+Industry Partnership Growth
+214
+Employer Engagement Interests
+-----------------------------
+Category
+Representative Count
+Recruiting Events
+755
+Internship Partnerships
+524
+Mentorship Programs
+388
+Industry Panels
+251
+Example Strategic Insights
+--------------------------
+*   Organizations demonstrated the strongest interest in recruiting events and internship partnerships.
+*   Employers emphasized employment outcomes and satisfaction metrics as primary indicators of career center effectiveness.
+*   Mid-sized organizations represented the largest share of survey participation.
+*   Cross-sector collaboration opportunities emerged as a recurring operational theme.
+*   Open-ended responses highlighted demand for streamlined communication and partnership coordination.
+Technical Workflow
+------------------
+The analytics workflow leveraged the R ecosystem, including:
+*   `dplyr` for transformation and wrangling
+*   `stringr` for text parsing and thematic detection
+*   `ggplot2` for visual reporting outputs
+*   `tidyr` and `purrr` for scalable data processing
+*   `knitr` and Quarto for reproducible reporting
+Professional Relevance
+----------------------
+This project reflects applied experience in:
+*   Strategic operations analytics
+*   Stakeholder intelligence
+*   Business reporting automation
+*   Survey operations and assessment
+*   Executive communication
+*   Cross-functional insight generation
+Prepared as a portfolio demonstration for strategy, operations, analytics, and MBA-oriented professional applications.
