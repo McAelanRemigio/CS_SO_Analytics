@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sample Survey Intelligence Portfolio Report</title>
+<title>Workforce & Labor Market Analytics Portfolio Report</title>
+
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -17,11 +17,15 @@ h1, h2 {
     color: #123b5d;
 }
 
-.disclaimer {
-    background-color: #f3f5f7;
-    border-left: 5px solid #123b5d;
-    padding: 15px;
+.hero {
+    background-color: #eaf2f8;
+    border-left: 6px solid #123b5d;
+    padding: 18px;
     margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 40px;
 }
 
 .styled-table {
@@ -43,258 +47,178 @@ h1, h2 {
     text-align: left;
 }
 
-.section {
-    margin-bottom: 40px;
-}
-
 .footer {
     margin-top: 60px;
     font-size: 0.9em;
     color: #555;
 }
 
-code {
-    background-color: #f4f4f4;
-    padding: 2px 4px;
-    border-radius: 4px;
+.disclaimer {
+    background-color: #f3f5f7;
+    border-left: 5px solid #123b5d;
+    padding: 15px;
+    margin-bottom: 30px;
 }
 </style>
+
 </head>
+
 <body>
 
-<h1>Employer Engagement Survey Intelligence Report</h1>
+<h1>Workforce & Labor Market Intelligence Report</h1>
 
 <p><strong>Portfolio Demonstration Version</strong></p>
 
-<div class="disclaimer">
-<strong>Confidentiality Notice:</strong><br>
-This document is a fully anonymized and synthetic portfolio demonstration derived from a real survey analytics workflow.
-All organization names, counts, categories, and operational details have been modified or generalized for confidentiality purposes.
-The report is intended to showcase analytical methodology, reporting structure, and strategic insight generation without exposing internal or proprietary information.
+<div class="hero">
+<strong>Core Contribution:</strong><br>
+Led labor market and workforce analytics supporting a multi-institutional California State University initiative contributing to a <strong>$2M workforce development grant proposal</strong> submitted under California Employment Development Department funding (U.S. Department of Labor aligned programs).
 </div>
 
-<h2>Project Overview</h2>
+<h2>Executive Summary: Workforce Analytics Impact</h2>
 
 <p>
-This report demonstrates a reusable survey analytics framework developed in R to transform structured and open-ended stakeholder feedback into operational insights and executive-style reporting outputs.
-</p>
-
-<p>
-The workflow included:
+This project centered on translating raw labor market data into actionable workforce insights to inform regional education-to-employment alignment strategy.
+The analysis directly supported grant development efforts across four California State University institutions by quantifying demand gaps, employer hiring patterns, and accessibility constraints in manufacturing and technical labor markets.
 </p>
 
 <ul>
-<li>Survey data cleaning and normalization</li>
-<li>Categorical response aggregation</li>
-<li>Text-based thematic analysis using rule-based keyword detection</li>
-<li>Stakeholder segmentation and filtering</li>
-<li>Automated reporting tables and visual summaries</li>
-<li>Strategic insight synthesis for decision support</li>
+<li>Modeled employer demand signals from structured job posting datasets</li>
+<li>Built role classification system for workforce segmentation (engineering, operations, supply chain, etc.)</li>
+<li>Developed accessibility scoring framework to estimate entry pathways across roles</li>
+<li>Quantified demand–supply gaps to support funding justification narratives</li>
+<li>Produced scenario-based policy simulations for workforce interventions</li>
 </ul>
 
-<h2>Representative Reporting Sections</h2>
+<h2>Labor Market Modeling & Grant Support Analysis</h2>
 
-<div class="section"><h2>Survey Distribution Channels</h2><table border="1" class="dataframe styled-table">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Category</th>
-      <th>Representative Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Regional Public University Network</td>
-      <td>412</td>
-    </tr>
-    <tr>
-      <td>Coastal Workforce Alliance</td>
-      <td>351</td>
-    </tr>
-    <tr>
-      <td>Metro Technical Consortium</td>
-      <td>289</td>
-    </tr>
-    <tr>
-      <td>Northern Innovation Collaborative</td>
-      <td>201</td>
-    </tr>
-    <tr>
-      <td>Community Career Partnership</td>
-      <td>177</td>
-    </tr>
-  </tbody>
-</table></div><div class="section"><h2>Employer Industry Representation</h2><table border="1" class="dataframe styled-table">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Category</th>
-      <th>Representative Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Education & Workforce Development</td>
-      <td>388</td>
-    </tr>
-    <tr>
-      <td>Public Administration</td>
-      <td>201</td>
-    </tr>
-    <tr>
-      <td>Healthcare & Human Services</td>
-      <td>173</td>
-    </tr>
-    <tr>
-      <td>Technology & Engineering</td>
-      <td>141</td>
-    </tr>
-    <tr>
-      <td>Professional Services</td>
-      <td>118</td>
-    </tr>
-  </tbody>
-</table></div><div class="section"><h2>Organization Size</h2><table border="1" class="dataframe styled-table">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Category</th>
-      <th>Representative Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>10–49 Employees</td>
-      <td>305</td>
-    </tr>
-    <tr>
-      <td>50–249 Employees</td>
-      <td>276</td>
-    </tr>
-    <tr>
-      <td>250–999 Employees</td>
-      <td>194</td>
-    </tr>
-    <tr>
-      <td>1000+ Employees</td>
-      <td>162</td>
-    </tr>
-  </tbody>
-</table></div><div class="section"><h2>Planned Hiring Types</h2><table border="1" class="dataframe styled-table">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Category</th>
-      <th>Representative Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Full-Time Roles</td>
-      <td>811</td>
-    </tr>
-    <tr>
-      <td>Internships</td>
-      <td>592</td>
-    </tr>
-    <tr>
-      <td>Part-Time Roles</td>
-      <td>476</td>
-    </tr>
-    <tr>
-      <td>Project-Based Roles</td>
-      <td>188</td>
-    </tr>
-  </tbody>
-</table></div><div class="section"><h2>Career Center Priorities</h2><table border="1" class="dataframe styled-table">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Category</th>
-      <th>Representative Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Employment Outcomes</td>
-      <td>702</td>
-    </tr>
-    <tr>
-      <td>Employer Satisfaction</td>
-      <td>588</td>
-    </tr>
-    <tr>
-      <td>Student Skill Development</td>
-      <td>421</td>
-    </tr>
-    <tr>
-      <td>Industry Partnership Growth</td>
-      <td>214</td>
-    </tr>
-  </tbody>
-</table></div><div class="section"><h2>Employer Engagement Interests</h2><table border="1" class="dataframe styled-table">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Category</th>
-      <th>Representative Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Recruiting Events</td>
-      <td>755</td>
-    </tr>
-    <tr>
-      <td>Internship Partnerships</td>
-      <td>524</td>
-    </tr>
-    <tr>
-      <td>Mentorship Programs</td>
-      <td>388</td>
-    </tr>
-    <tr>
-      <td>Industry Panels</td>
-      <td>251</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<h2>Example Strategic Insights</h2>
-
-<ul>
-<li>Organizations demonstrated the strongest interest in recruiting events and internship partnerships.</li>
-<li>Employers emphasized employment outcomes and satisfaction metrics as primary indicators of career center effectiveness.</li>
-<li>Mid-sized organizations represented the largest share of survey participation.</li>
-<li>Cross-sector collaboration opportunities emerged as a recurring operational theme.</li>
-<li>Open-ended responses highlighted demand for streamlined communication and partnership coordination.</li>
-</ul>
-
-<h2>Technical Workflow</h2>
-
+<div class="section">
 <p>
-The analytics workflow leveraged the R ecosystem, including:
+The following analytical framework was used to estimate workforce demand, categorize job roles, and model intervention scenarios that informed grant justification materials.
 </p>
 
 <ul>
-<li><code>dplyr</code> for transformation and wrangling</li>
-<li><code>stringr</code> for text parsing and thematic detection</li>
-<li><code>ggplot2</code> for visual reporting outputs</li>
-<li><code>tidyr</code> and <code>purrr</code> for scalable data processing</li>
-<li><code>knitr</code> and Quarto for reproducible reporting</li>
+<li>Job posting aggregation and deduplication across platforms</li>
+<li>Standardization of salary and employer metadata</li>
+<li>Role family classification using rule-based NLP heuristics</li>
+<li>Pipeline-level inference (internship → entry → experienced)</li>
+<li>Accessibility scoring to approximate workforce entry feasibility</li>
 </ul>
+</div>
 
-<h2>Professional Relevance</h2>
+<div class="section">
+<h3>Key Workforce Metrics (Modeled Output)</h3>
+
+<pre>
+Baseline Accessible Demand: {baseline_metrics['total_accessible_demand']:.1f}
+CSU Supply Assumption: {baseline_metrics['csu_supply']:.1f}
+Placements Possible: {baseline_metrics['placements_possible']:.1f}
+Percent Fulfilled: {baseline_metrics['percent_fulfilled']:.1f}%
+</pre>
+</div>
+
+<div class="section">
+<h3>Scenario Impact Simulation</h3>
 
 <p>
-This project reflects applied experience in:
+Policy scenarios were developed to evaluate how targeted interventions could improve workforce alignment outcomes.
 </p>
 
+<table class="styled-table">
+<tr>
+<th>Scenario</th>
+<th>Placements</th>
+<th>Change vs Baseline</th>
+<th>Accessibility Impact</th>
+</tr>
+
+<tr>
+<td>Baseline</td>
+<td>{baseline_metrics['placements_possible']:.1f}</td>
+<td>—</td>
+<td>Current state</td>
+</tr>
+
+<tr>
+<td>Supply Expansion</td>
+<td>{scenarios_df.loc['Supply +20%', 'placements_possible'] if 'Supply +20%' in scenarios_df.index else 'N/A'}</td>
+<td>+Capacity Adjustment</td>
+<td>Increased fulfillment capacity</td>
+</tr>
+
+<tr>
+<td>Employer Targeting</td>
+<td>Modeled uplift applied</td>
+<td>Demand rebalancing</td>
+<td>Improved entry accessibility</td>
+</tr>
+
+<tr>
+<td>Combined Intervention</td>
+<td>Highest modeled outcome</td>
+<td>Maximized impact</td>
+<td>Best-case alignment scenario</td>
+</tr>
+
+</table>
+</div>
+
+<hr>
+
+<h2>Downstream Survey Intelligence System</h2>
+
+<p>
+To complement labor market modeling, a structured survey analytics pipeline was developed to capture employer engagement signals and workforce readiness indicators.
+This system functioned as the reporting layer for validating and contextualizing labor market findings.
+</p>
+
+<div class="section">
+<h3>Survey Analytics Capabilities</h3>
+
 <ul>
-<li>Strategic operations analytics</li>
-<li>Stakeholder intelligence</li>
-<li>Business reporting automation</li>
-<li>Survey operations and assessment</li>
-<li>Executive communication</li>
-<li>Cross-functional insight generation</li>
+<li>Survey response normalization and cleaning pipeline</li>
+<li>Categorical aggregation across employer segments</li>
+<li>Industry and organization size stratification</li>
+<li>Hiring intention classification</li>
+<li>Employer engagement prioritization signals</li>
+<li>Executive reporting automation framework</li>
+</ul>
+</div>
+
+<h2>Representative Survey Insights</h2>
+
+<div class="section">
+<table class="styled-table">
+<tr><th>Category</th><th>Representative Count</th></tr>
+<tr><td>Recruiting Events</td><td>755</td></tr>
+<tr><td>Internship Partnerships</td><td>524</td></tr>
+<tr><td>Mentorship Programs</td><td>388</td></tr>
+<tr><td>Industry Panels</td><td>251</td></tr>
+</table>
+</div>
+
+<h2>Technical Implementation Stack</h2>
+
+<ul>
+<li>Python (Pandas, NumPy, Regex)</li>
+<li>Statistical data transformation pipelines</li>
+<li>Rule-based NLP classification systems</li>
+<li>Scenario modeling for workforce planning</li>
+<li>Matplotlib for exploratory analytics</li>
+<li>Reproducible CSV pipeline exports for grant documentation</li>
+</ul>
+
+<h2>Professional Impact</h2>
+
+<ul>
+<li>Supported multi-institution CSU workforce development grant proposal (~$2M scope)</li>
+<li>Translated raw labor market data into policy-relevant workforce intelligence</li>
+<li>Enabled employer demand quantification for manufacturing and technical sectors</li>
+<li>Provided analytical foundation for education-to-employment alignment strategy</li>
+<li>Bridged survey research and labor market modeling into a unified reporting system</li>
 </ul>
 
 <div class="footer">
-Prepared as a portfolio demonstration for strategy, operations, analytics, and MBA-oriented professional applications.
+Prepared as a portfolio demonstration of workforce analytics, labor market modeling, and applied public-sector data science.
 </div>
 
 </body>
