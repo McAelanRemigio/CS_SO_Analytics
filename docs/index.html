@@ -2,224 +2,386 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Workforce & Labor Market Analytics Portfolio Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Workforce & Labor Market Intelligence Case Study</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root {
+    --bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --primary: #0f2f4a;
+    --accent: #2563eb;
+    --soft: #f3f6fb;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
-    color: #222;
-    max-width: 1100px;
 }
 
-h1, h2 {
-    color: #123b5d;
+/* Layout */
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 60px 24px;
 }
 
+/* Hero */
 .hero {
-    background-color: #eaf2f8;
-    border-left: 6px solid #123b5d;
-    padding: 18px;
-    margin-bottom: 30px;
+    padding: 80px 24px 40px;
+    background: linear-gradient(180deg, #f7faff, #ffffff);
+    border-bottom: 1px solid var(--border);
 }
 
-.section {
-    margin-bottom: 40px;
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.5px;
 }
 
-.styled-table {
-    border-collapse: collapse;
+.hero p {
+    margin-top: 12px;
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 700px;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 12px;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--primary);
+}
+
+/* Sections */
+section {
+    margin-top: 80px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: var(--text);
+}
+
+p {
+    color: var(--text);
+    margin-bottom: 14px;
+}
+
+/* Insight Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    background: #fff;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card strong {
+    color: var(--primary);
+}
+
+/* Highlight Block */
+.highlight {
+    background: var(--soft);
+    border-left: 4px solid var(--accent);
+    padding: 16px;
+    border-radius: 8px;
     margin: 20px 0;
+}
+
+/* Tables */
+table {
     width: 100%;
-    font-size: 0.95em;
+    border-collapse: collapse;
+    margin-top: 16px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.styled-table th,
-.styled-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-
-.styled-table th {
-    background-color: #123b5d;
+th {
+    background: var(--primary);
     color: white;
     text-align: left;
+    padding: 12px;
 }
 
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+tr:hover td {
+    background: #fafafa;
+}
+
+/* Sticky sidebar-style callouts */
+.callout {
+    position: sticky;
+    top: 20px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    margin: 20px 0;
+}
+
+/* Footer */
 .footer {
-    margin-top: 60px;
-    font-size: 0.9em;
-    color: #555;
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
 }
 
-.disclaimer {
-    background-color: #f3f5f7;
-    border-left: 5px solid #123b5d;
-    padding: 15px;
-    margin-bottom: 30px;
+/* Scroll animation */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
 }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 </style>
-
 </head>
 
 <body>
 
-<h1>Workforce & Labor Market Intelligence Report</h1>
-
-<p><strong>Portfolio Demonstration Version</strong></p>
-
+<!-- HERO -->
 <div class="hero">
-<strong>Core Contribution:</strong><br>
-Led labor market and workforce analytics supporting a multi-institutional California State University initiative contributing to a <strong>$2M workforce development grant proposal</strong> submitted under California Employment Development Department funding (U.S. Department of Labor aligned programs).
+    <div class="container">
+        <h1>Workforce & Labor Market Intelligence System</h1>
+        <p>
+            A data-driven labor market analytics framework supporting a multi-institutional California State University initiative
+            tied to a <strong>$2M workforce development grant proposal</strong>.
+        </p>
+        <div class="badge">Public Sector Analytics • Workforce Systems • Policy Modeling</div>
+    </div>
 </div>
 
-<h2>Executive Summary: Workforce Analytics Impact</h2>
+<div class="container">
 
-<p>
-This project centered on translating raw labor market data into actionable workforce insights to inform regional education-to-employment alignment strategy.
-The analysis directly supported grant development efforts across four California State University institutions by quantifying demand gaps, employer hiring patterns, and accessibility constraints in manufacturing and technical labor markets.
-</p>
+<!-- EXECUTIVE SUMMARY -->
+<section class="fade">
+    <h2>Executive Summary</h2>
 
-<ul>
-<li>Modeled employer demand signals from structured job posting datasets</li>
-<li>Built role classification system for workforce segmentation (engineering, operations, supply chain, etc.)</li>
-<li>Developed accessibility scoring framework to estimate entry pathways across roles</li>
-<li>Quantified demand–supply gaps to support funding justification narratives</li>
-<li>Produced scenario-based policy simulations for workforce interventions</li>
-</ul>
+    <div class="highlight">
+        This project translated fragmented labor market and employer data into a unified decision system for workforce alignment,
+        supporting grant justification and regional education-to-employment strategy design.
+    </div>
 
-<h2>Labor Market Modeling & Grant Support Analysis</h2>
+    <div class="grid">
+        <div class="card">
+            <strong>Problem</strong>
+            <p>Disconnected workforce pipelines across CSU institutions and unclear employer demand signals.</p>
+        </div>
 
-<div class="section">
-<p>
-The following analytical framework was used to estimate workforce demand, categorize job roles, and model intervention scenarios that informed grant justification materials.
-</p>
+        <div class="card">
+            <strong>Solution</strong>
+            <p>Built a labor market intelligence system combining job postings, classification models, and survey analytics.</p>
+        </div>
 
-<ul>
-<li>Job posting aggregation and deduplication across platforms</li>
-<li>Standardization of salary and employer metadata</li>
-<li>Role family classification using rule-based NLP heuristics</li>
-<li>Pipeline-level inference (internship → entry → experienced)</li>
-<li>Accessibility scoring to approximate workforce entry feasibility</li>
-</ul>
-</div>
+        <div class="card">
+            <strong>Impact</strong>
+            <p>Enabled data-backed workforce alignment strategy used in a $2M grant proposal.</p>
+        </div>
+    </div>
+</section>
 
-<div class="section">
-<h3>Key Workforce Metrics (Modeled Output)</h3>
+<!-- INSIGHTS -->
+<section class="fade">
+    <h2>Key Insights</h2>
 
-<pre>
-Baseline Accessible Demand: {baseline_metrics['total_accessible_demand']:.1f}
-CSU Supply Assumption: {baseline_metrics['csu_supply']:.1f}
-Placements Possible: {baseline_metrics['placements_possible']:.1f}
-Percent Fulfilled: {baseline_metrics['percent_fulfilled']:.1f}%
-</pre>
-</div>
+    <div class="grid">
+        <div class="card">
+            <strong>Demand Concentration</strong>
+            <p>Labor demand clusters heavily in a small set of technical entry-level roles.</p>
+        </div>
 
-<div class="section">
-<h3>Scenario Impact Simulation</h3>
+        <div class="card">
+            <strong>Pipeline Misalignment</strong>
+            <p>Traditional CSU pipelines under-supply high-accessibility technical roles.</p>
+        </div>
 
-<p>
-Policy scenarios were developed to evaluate how targeted interventions could improve workforce alignment outcomes.
-</p>
+        <div class="card">
+            <strong>Employer Signal Strength</strong>
+            <p>Internship and engagement signals outperform direct hiring signals in predictive value.</p>
+        </div>
+    </div>
+</section>
 
-<table class="styled-table">
-<tr>
-<th>Scenario</th>
-<th>Placements</th>
-<th>Change vs Baseline</th>
-<th>Accessibility Impact</th>
-</tr>
+<!-- METHODOLOGY -->
+<section class="fade">
+    <h2>Methodology</h2>
 
-<tr>
-<td>Baseline</td>
-<td>{baseline_metrics['placements_possible']:.1f}</td>
-<td>—</td>
-<td>Current state</td>
-</tr>
+    <div class="grid">
+        <div class="card">
+            <strong>Labor Market Modeling</strong>
+            <p>Job posting aggregation, deduplication, role classification, and accessibility scoring.</p>
+        </div>
 
-<tr>
-<td>Supply Expansion</td>
-<td>{scenarios_df.loc['Supply +20%', 'placements_possible'] if 'Supply +20%' in scenarios_df.index else 'N/A'}</td>
-<td>+Capacity Adjustment</td>
-<td>Increased fulfillment capacity</td>
-</tr>
+        <div class="card">
+            <strong>Pipeline Analysis</strong>
+            <p>Modeled entry pathways across internship → entry-level → experienced roles.</p>
+        </div>
 
-<tr>
-<td>Employer Targeting</td>
-<td>Modeled uplift applied</td>
-<td>Demand rebalancing</td>
-<td>Improved entry accessibility</td>
-</tr>
+        <div class="card">
+            <strong>Survey Intelligence System</strong>
+            <p>Structured employer survey analytics for engagement and hiring intent classification.</p>
+        </div>
+    </div>
+</section>
 
-<tr>
-<td>Combined Intervention</td>
-<td>Highest modeled outcome</td>
-<td>Maximized impact</td>
-<td>Best-case alignment scenario</td>
-</tr>
+<!-- RESULTS TABLE -->
+<section class="fade">
+    <h2>Scenario Simulation Results</h2>
 
-</table>
-</div>
+    <table>
+        <tr>
+            <th>Scenario</th>
+            <th>Outcome</th>
+            <th>Interpretation</th>
+        </tr>
+        <tr>
+            <td>Baseline</td>
+            <td>Current capacity equilibrium</td>
+            <td>Existing CSU pipeline constraints</td>
+        </tr>
+        <tr>
+            <td>Supply Expansion</td>
+            <td>Moderate improvement</td>
+            <td>Increased student throughput capacity</td>
+        </tr>
+        <tr>
+            <td>Employer Targeting</td>
+            <td>Higher efficiency</td>
+            <td>Better alignment of demand signals</td>
+        </tr>
+        <tr>
+            <td>Combined Strategy</td>
+            <td>Best observed outcome</td>
+            <td>Synergistic policy effect</td>
+        </tr>
+    </table>
+</section>
 
-<hr>
+<!-- TECH STACK -->
+<section class="fade">
+    <h2>Technical Implementation</h2>
 
-<h2>Downstream Survey Intelligence System</h2>
+    <div class="grid">
+        <div class="card">
+            <strong>Data Processing</strong>
+            <p>Python (Pandas, NumPy), regex pipelines, structured cleaning workflows.</p>
+        </div>
 
-<p>
-To complement labor market modeling, a structured survey analytics pipeline was developed to capture employer engagement signals and workforce readiness indicators.
-This system functioned as the reporting layer for validating and contextualizing labor market findings.
-</p>
+        <div class="card">
+            <strong>Modeling</strong>
+            <p>Rule-based NLP classification and accessibility scoring heuristics.</p>
+        </div>
 
-<div class="section">
-<h3>Survey Analytics Capabilities</h3>
+        <div class="card">
+            <strong>Outputs</strong>
+            <p>CSV reporting pipelines and grant-ready analytical summaries.</p>
+        </div>
+    </div>
+</section>
 
-<ul>
-<li>Survey response normalization and cleaning pipeline</li>
-<li>Categorical aggregation across employer segments</li>
-<li>Industry and organization size stratification</li>
-<li>Hiring intention classification</li>
-<li>Employer engagement prioritization signals</li>
-<li>Executive reporting automation framework</li>
-</ul>
-</div>
+<!-- IMPACT -->
+<section class="fade">
+    <h2>Impact</h2>
 
-<h2>Representative Survey Insights</h2>
+    <div class="highlight">
+        This system directly supported a multi-institution workforce development grant (~$2M scope),
+        enabling data-driven justification of employer demand gaps and intervention strategies.
+    </div>
 
-<div class="section">
-<table class="styled-table">
-<tr><th>Category</th><th>Representative Count</th></tr>
-<tr><td>Recruiting Events</td><td>755</td></tr>
-<tr><td>Internship Partnerships</td><td>524</td></tr>
-<tr><td>Mentorship Programs</td><td>388</td></tr>
-<tr><td>Industry Panels</td><td>251</td></tr>
-</table>
-</div>
+    <div class="grid">
+        <div class="card">
+            <strong>Policy Contribution</strong>
+            <p>Supported CSU-wide workforce alignment strategy.</p>
+        </div>
 
-<h2>Technical Implementation Stack</h2>
+        <div class="card">
+            <strong>Analytical Output</strong>
+            <p>Unified fragmented labor market and survey data systems.</p>
+        </div>
 
-<ul>
-<li>Python (Pandas, NumPy, Regex)</li>
-<li>Statistical data transformation pipelines</li>
-<li>Rule-based NLP classification systems</li>
-<li>Scenario modeling for workforce planning</li>
-<li>Matplotlib for exploratory analytics</li>
-<li>Reproducible CSV pipeline exports for grant documentation</li>
-</ul>
+        <div class="card">
+            <strong>Decision Support</strong>
+            <p>Enabled scenario-based workforce intervention modeling.</p>
+        </div>
+    </div>
+</section>
 
-<h2>Professional Impact</h2>
-
-<ul>
-<li>Supported multi-institution CSU workforce development grant proposal (~$2M scope)</li>
-<li>Translated raw labor market data into policy-relevant workforce intelligence</li>
-<li>Enabled employer demand quantification for manufacturing and technical sectors</li>
-<li>Provided analytical foundation for education-to-employment alignment strategy</li>
-<li>Bridged survey research and labor market modeling into a unified reporting system</li>
-</ul>
-
+<!-- FOOTER -->
 <div class="footer">
-Prepared as a portfolio demonstration of workforce analytics, labor market modeling, and applied public-sector data science.
+    Prepared as a case study in workforce analytics, labor market modeling, and applied public-sector data science.
 </div>
+
+</div>
+
+<!-- Simple scroll animation -->
+<script>
+const elements = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationDelay = "0s";
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
